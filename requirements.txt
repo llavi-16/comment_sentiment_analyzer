@@ -4,3 +4,6 @@ transformers
 scikit-learn
 numpy
 nltk
+pydantic
+python-multipart
+matplotlib
