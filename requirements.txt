@@ -2,8 +2,11 @@ fastapi
 uvicorn
 transformers
 scikit-learn
-numpy
 nltk
-pydantic
-python-multipart
+numpy
 matplotlib
+opencv-python
+mediapipe
+python-dotenv
+jupyter
+streamlit
