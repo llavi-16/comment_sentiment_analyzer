@@ -6,7 +6,6 @@ nltk
 numpy
 matplotlib
 opencv-python
-mediapipe
 python-dotenv
 jupyter
 streamlit
