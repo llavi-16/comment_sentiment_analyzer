@@ -98,7 +98,6 @@ MarkupSafe
 matplotlib
 matplotlib-inline
 mdurl
-mediapipe
 mistune
 ml_dtypes
 more-itertools
