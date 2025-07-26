@@ -39,9 +39,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model_path = "./sentiment-model" 
-tokenizer = BertTokenizer.from_pretrained(model_path)
-model = BertForSequenceClassification.from_pretrained(model_path)
+# # model_path = "./sentiment-model" 
+# tokenizer = BertTokenizer.from_pretrained(model_path)
+# model = BertForSequenceClassification.from_pretrained(model_path)
+model_path = "backend/sentiment-model"
+try:
+    tokenizer = BertTokenizer.from_pretrained(model_path)
+    model = BertForSequenceClassification.from_pretrained(model_path)
+except Exception as e:
+    raise RuntimeError(f"❌ Failed to load model from {model_path}: {e}")
+
 # tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 # model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=3)
 
