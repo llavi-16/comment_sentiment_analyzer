@@ -1,26 +1,24 @@
-# --- Core ML Libraries ---
+# === Core ML Libraries ===
 transformers==4.40.0
 torch==2.5.1
-torchaudio==2.5.1
 torchvision==0.18.1
+torchaudio==2.6.0
+
+# === ML + NLP ===
 scikit-learn==1.4.1.post1
-numpy==1.24.4
 pandas==2.2.2
-matplotlib==3.8.4
-
-# --- Backend + Deployment ---
-fastapi==0.111.0
-uvicorn==0.30.1
-python-multipart==0.0.9
-jinja2==3.1.3
-
-# --- Text Processing ---
+numpy==1.24.4
 textblob==0.18.0
 nltk==3.8.1
+matplotlib==3.8.4
 
-# --- Tokenizer (avoid Rust builds) ---
+# === Backend + FastAPI ===
+fastapi==0.111.0
+uvicorn==0.30.1
+jinja2==3.1.3
+python-multipart==0.0.9
+requests==2.31.0
+
+# === Avoid Rust builds ===
 tokenizers==0.14.1 --only-binary=:all:
 safetensors==0.4.0 --only-binary=:all:
-
-# --- Optional ---
-requests==2.31.0
