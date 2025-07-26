@@ -29,9 +29,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model_path = "./sentiment-model" 
-tokenizer = BertTokenizer.from_pretrained(model_path)
-model = BertForSequenceClassification.from_pretrained(model_path)
+# model_path = "./sentiment-model" 
+# tokenizer = BertTokenizer.from_pretrained(model_path)
+# model = BertForSequenceClassification.from_pretrained(model_path)
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=3)
 
 model.eval()
 
