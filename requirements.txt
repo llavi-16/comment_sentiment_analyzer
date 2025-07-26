@@ -155,7 +155,6 @@ python-dotenv
 python-json-logger
 pytweening
 pytz
-pywin32
 pywinpty
 PyYAML
 pyzmq
