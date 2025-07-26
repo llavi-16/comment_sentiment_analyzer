@@ -11,6 +11,16 @@ from nltk.stem import WordNetLemmatizer
 from dotenv import load_dotenv
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification
+import gdown
+# Automatically download model if not present
+model_dir = "backend/sentiment-model"
+model_file = f"{model_dir}/model.safetensors"
+
+os.makedirs(model_dir, exist_ok=True)
+
+if not os.path.exists(model_file):
+    print("🔽 Downloading model from Google Drive...")
+    gdown.download(id="18Jrro0eg6Arf2dF5HAk5-aJXJF4lnS64", output=model_file, quiet=False)
 
 
 load_dotenv()
