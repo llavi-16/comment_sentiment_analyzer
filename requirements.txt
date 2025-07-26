@@ -16,6 +16,5 @@ jinja2
 python-multipart
 requests
 
-# === Avoid Rust builds ===
-tokenizers==0.14.1 --only-binary=:all:
-safetensors==0.4.0 --only-binary=:all:
+tokenizers
+safetensors
